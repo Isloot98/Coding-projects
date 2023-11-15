@@ -1,0 +1,386 @@
+html { background-color: #CAC0B3;
+font-size: 16px;}
+
+h1, h2 { color: #001233;
+}
+
+p {color:#001233;
+}
+
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Style for timeline events */
+.event {
+    flex: 1; /* Distribute available space evenly among the boxes */
+    padding: 1.5rem;
+    border: 1px solid #001233;
+    background: #001233;
+    border-radius: 2.5rem;
+    box-shadow:
+      0px -0.5rem 1rem rgba(0, 0, 0, 0.2),
+      0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      flex-basis: calc(100% - 20px); /* Set the initial width to 50% (2 boxes per row) */
+  min-width: 0;
+  min-height: 12.5rem;
+  max-width: 87%;
+
+  }
+
+    
+  
+
+.event p {
+    background: #001233;
+    color: #CAC0B3;
+}
+
+.event h3 {
+    background: #001233;
+    color: #FF595A;
+
+}
+
+/* Style for event dates */
+.event-date {
+    font-weight: bold;
+    background: #001233;
+    color: #FF595A;
+
+}
+
+.arrow {
+    content: "";
+    position: relative;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FF595A; /* Arrow color */
+    top: 100%; /* Position the arrow at the bottom of the event */
+    left: 50%; /* Center the arrow horizontally */
+    transform: translateX(-50%); /* Adjust to center the arrow correctly */
+  }
+
+
+#journey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 6.25rem;
+    padding-top: 1.5rem; /* Add some padding to separate the h2 from the timeline */
+}
+
+#journey h2 {
+    color: #001233;
+}
+
+/* Center the .journey-content text horizontally */
+.journey-content {
+    text-align: center;
+}
+
+  
+
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.card {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #001233;
+    width: calc(50% - 1rem); /* 50% width minus 30px margin between cards */
+    margin: 0 1rem; /* 15px margin between cards */
+    box-sizing: border-box; /* Includes padding and border in the width */
+    background-color: #001233;
+    border-radius: 2.5rem;
+    box-shadow:
+    0px -0.5rem 1rem rgba(0, 0, 0, 0.2), /* Top shadow (lighter color) */
+    0px 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Bottom shadow (darker color) */;
+    margin-top: 1rem;
+    position: relative;
+}
+
+@media (max-width: 1200px) {
+    #about {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .card {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+
+.Skills {background-color: #001233;
+    display: flex;
+    justify-content: end;
+    display: none;
+    position: absolute;
+    top: 4.4rem; /* Position at the top */
+    right: 0;
+}
+
+
+.card h2 { background-color: #001233;
+color: #FF595A;}
+
+.card p { background-color: #001233;
+color: #CAC0B3;}
+
+
+
+.Me {border-radius: 2.5rem;
+    background-color: #001233;
+    margin-left: 0;
+    transition: opacity 0.5s, margin-left 0.5s;
+
+}
+
+@media (max-width: 1300px) {
+    .Me {
+      max-width: 100%; /* Adjust the maximum width as needed */
+      height: auto; /* Maintain the aspect ratio */
+    }
+  }
+
+.image-container { display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001233;
+}
+
+.contact {
+    border: 2px solid #001233;
+
+
+}
+
+footer {
+    background-color:#001233;
+    border-radius: 2.5rem;
+}
+
+    
+
+
+#contact { background-color: #001233;
+}
+footer p  { background-color: #001233;
+    color: #CAC0B3;
+    border-radius: 2.5rem;
+    
+}
+
+footer h1 { background-color: #001233;
+    color: #FF595A;
+}
+
+li{background-color: #001233;
+color: #CAC0B3;}
+
+ul {background-color: #001233;}
+
+
+header h1 {color: #FF595A;
+    text-align: right;
+    font-size: 4rem;
+    margin-left: 4rem;
+    padding-left: 6rem;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* To push the button to the left */
+    padding: 10px; /* Add padding for spacing */
+    background-color: #001233;
+    border-radius: 2.5rem;
+  }
+  
+  .menu-button {
+    background-color: #CAC0B3;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #001233;;
+    font-size: 2rem;
+
+  }
+  
+  .breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:list-item
+    z-index: 1;
+    color: #FF595A;
+
+  }
+  
+  .breadcrumbs li {
+    display: inline;
+    margin-right: 5px;
+    color: #FF595A;
+
+  }
+  
+  .breadcrumbs a {
+    text-decoration: none;
+    color: #001233;
+    color: #FF595A;
+
+  }
+
+  .menu-button {
+    background: transparent; /* Remove background color */
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-button.open .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-button.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-button.open .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .img { display: none;
+max-height: 500px;
+max-width: auto;
+border-radius: 2.5rem;}
+
+
+#messageGen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 6.25rem;
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem;
+}
+
+.messageGenContainer {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #001233;
+    width: calc(50% - 1rem); /* 50% width minus 30px margin between cards */
+    margin: 0 1rem; /* 15px margin between cards */
+    box-sizing: border-box; /* Includes padding and border in the width */
+    background-color: #001233;
+    border-radius: 2.5rem;
+    box-shadow:
+    0px -0.5rem 1rem rgba(0, 0, 0, 0.2), /* Top shadow (lighter color) */
+    0px 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Bottom shadow (darker color) */;
+    margin-top: 1rem;
+    position: relative;
+    text-align: center;
+    width:100%;
+    
+    
+}
+
+.messageGenContainer h1 {
+    color: #FF595A;
+}
+
+.messageGenContainer p {
+    color: #CAC0B3;
+}
+
+.messageGenContainer button {
+      padding: 0.6em 2em;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    .messageGenContainer button:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-button-85 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    
+    @keyframes messageGenContainerButton {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .messageGenContainer button:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    #message {color: #CAC0B3;}
