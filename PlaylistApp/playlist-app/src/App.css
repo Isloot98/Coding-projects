@@ -1,10 +1,23 @@
+html {
+  font-size: 16px;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
+  align-self: flex-start;
+  margin-left: 2rem;
+  margin-top: -7.5rem;
+}
+
+.appName {
+  display: flex;
+  align-items: center;
+  margin-top: -0.1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,8 +28,8 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  justify-content:;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,9 +37,34 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-body {
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center; /* Vertical alignment */
+  height: 100vh;
+  background-color: #ff8000;
 }
+
+.grid {
+  margin-top: 1rem;
+  background-color: #282c34;
+  min-height: 100vmin;
+    display: grid;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  border-color: #ff8000;
+  border: 1px solid;
+  width: 98%;
+  grid-gap: 1rem;
+  box-shadow: 10px 40px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gridCol1 {
+  border-color: aliceblue;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +73,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.playlist {
+  color: #ff8000;
+}
+
+.forge {
+  color: beige
 }
