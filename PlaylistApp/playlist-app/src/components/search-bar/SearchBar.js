@@ -8,10 +8,11 @@ const SearchBar = () => {
     { id: 3, name: 'Indubitably', artist: 'Jeremy', album: 'Christmas no.1' },
     { id: 4, name: 'Glip Glop', artist: 'Richard', album: 'Mortimer' },
   ];
+  const newPlaylist = []
 
   const [searchInput, setSearchInput] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [submitted, setSubmitted] = useState(false);
+  const [addedToPlaylist, setAddedToPlaylist] = useState(false)
 
   useEffect(() => {
     if (searchInput === '') {
@@ -25,20 +26,31 @@ const SearchBar = () => {
     setSearchResults(
       mockData.filter((result) => result.name.toLowerCase().includes(input.toLowerCase()))
     );
-    setSubmitted(false); // Reset submitted state on input change
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true); // Set submitted state on form submission
-    setSearchResults(
-      mockData.filter((result) => result.name.toLowerCase().includes(searchInput.toLowerCase()))
-    );
-  };
 
+  const addToPlaylist = (results) => {
+    results.preventDefault();
+    setAddedToPlaylist(true);
+    if (addedToPlaylist === true) {
+results.push(newPlaylist);
+console.log(results);
+
+  }
+};
+
+const removeFromPlaylist = (array) => {
+    array.preventDefault();
+    setAddedToPlaylist(false);
+    if (addedToPlaylist === false) {
+        array.splice(-1,1)}
+        console.log(array);
+};
+
+ 
   return (
     <div className="searchBar">
-      <form onSubmit={handleSubmit}>
+      <form >
         <input
           className='searchBox'
           type="text"
@@ -47,24 +59,20 @@ const SearchBar = () => {
           value={searchInput}
         />
         <div id="resultsContainer">
-          {!submitted && (
+          
             <ul>
               {searchResults.map((result) => (
+                <>
                 <li key={result.id}>{result.name}</li>
+                <button onClick={() => addToPlaylist(result.name)}>+</button>
+                <button onClick={() => removeFromPlaylist(newPlaylist)}>-</button>
+
+                </>
               ))}
             </ul>
-          )}
+          
         </div>
-        {submitted && (
-          <div>
-            <h3>Search Results</h3>
-            <ul>
-              {searchResults.map((result) => (
-                <li key={result.id}>{result.name}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import isa from './isa.svg'
 import './App.css';
 import SearchBar from './components/search-bar/SearchBar'
+import Playlist from './components/playlist/Playlist'
 
 const mockData = [
   { id: 1, name: 'Song A' },
@@ -45,7 +46,7 @@ function App() {
         </ul>
         </div>
         <div className='gridCol2'>
-          
+          <Playlist />
         </div>
         </div>
       </body>
