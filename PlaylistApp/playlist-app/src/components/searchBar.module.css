@@ -1,0 +1,127 @@
+.searchBox {width: 90%;
+align-content: start;
+margin-top: 2rem;
+height: 3rem;
+margin-left: 2.2rem;
+font-size: 1.7rem;
+font-weight: bold;
+text-indent: 2.1em;
+background-color: #ff8000;
+color: #001f3f;
+border-radius: 2rem;
+border: none; /* Remove default border */
+  outline: none; /* Remove focus outline */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.searchBox:focus {
+    /* Adjust the appearance when focused */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on focus */
+  }
+
+.resultsContainer {
+
+    background-color: aliceblue;
+}
+
+ul {
+    list-style: none;
+    background-color: #ff8000;
+    text-align: left;
+    margin-left: 2.2rem;
+    text-indent: 1em;
+    border-radius: 1rem;
+    line-height: 1.5;
+}
+
+.results {
+    color:#ff8000
+}
+
+.addButton {
+    padding: 8px 16px;
+    margin-right: 1rem;
+    border: 2px solid #001f3f;
+    color: #001f3f; 
+    background-color: transparent; 
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10rem; 
+  }
+  
+  .addButton:hover {
+    
+    background-color: #282c34;
+    display: flex;
+    color: white; 
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    color: #001f3f;
+    
+  }
+  
+  .list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 8px; 
+    opacity: 0; 
+    animation: slideIn 0.9s forwards; 
+    transition: line-height 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  }
+
+  .list li:hover {
+    line-height: 3; 
+    background-color: #001f3f;
+    color: #ff8000;
+  }
+
+  .list li:hover .addButton {
+    background-color: #ff8000;
+    color: #001f3f;
+    border-color: #ff8000
+  }
+
+  .list li:hover .addButton:hover {
+    background-color: #001f3f;
+    color: #ff8000;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+  .artistAlbum {
+    font-size: 0.8rem;
+    display: block;
+
+  }
+
+  .name {
+    display: block;
+  }
+
+  .resultsContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease; 
+    background-color: transparent;
+  }
+  
+  .resultsContainer.open {
+    max-height: 500px; }

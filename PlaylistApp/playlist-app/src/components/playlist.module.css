@@ -1,0 +1,138 @@
+.list {
+    color:antiquewhite;
+}
+
+.title {
+    color: #ff8000;
+}
+
+.removeButton {
+    border-radius: 3rem;
+    font-weight: bolder;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5;
+color: #001f3f;
+  }
+  
+  .list li {
+    display: flex;
+    justify-content: space-between; /* Aligns children elements with space between them */
+    align-items: center; /* Vertically center aligns the elements */
+    margin-bottom: 8px; /* Adjust as needed */
+    opacity: 0; /* Initially hide the list items */
+  transform: translateX(-20px); /* Move items to the left */
+  animation: slideIn 0.3s forwards; /* Apply animation */
+  transition: transform 0.3s ease-in-out;
+  transition: line-height 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+
+  }
+
+  .list li:hover {
+    line-height: 3; /* Change this to the desired value */
+    background-color: #001f3f;
+    color: #ff8000;
+  }
+
+  .list li:hover .removeButton {
+    background-color: #ff8000;
+    color: #001f3f;
+    border-color: #ff8000
+  }
+
+  .list li:hover .removeButton:hover {
+    background-color: #001f3f;
+    color: #ff8000;
+  }
+
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px); /* Start off-screen */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* Slide in to default position */
+    }
+  }
+  
+  .removeButton {
+    padding: 8px 16px;
+    margin-right: 1rem;
+    border: 2px solid #001f3f; /* Red border */
+    color: #001f3f; /* Red text color */
+    background-color: transparent; /* Transparent background */
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    border-radius: 6rem; /* Rounded corners */
+  }
+  
+  .removeButton:hover {
+       /* Hover effect */
+       background-color: #282c34;
+       display: flex;; /* Red background on hover */
+       color: white; /* White text color on hover */
+  }
+  
+  
+
+  .artistAlbum {
+    font-size: 0.8rem;
+    display: block;
+
+  }
+
+  .name {
+    display: block;
+  }
+
+  .playlistBox {width: 90%;
+    align-content: start;
+    margin-top: 2rem;
+    height: 3rem;
+    margin-left: 2.2rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-indent: 2.1em;
+    background-color: #ff8000;
+    color: #001f3f;
+    border-radius: 2rem;
+    border: none; /* Remove default border */
+      outline: none; /* Remove focus outline */
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    
+    
+    }
+    
+    .playlistBox:focus {
+        /* Adjust the appearance when focused */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on focus */
+      }
+
+    .playlistName {
+        color: #ff8000;
+      }
+
+      .create {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #ff8000;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      .create:hover {
+        background-color: #001f3f;
+        color: #ff8000;
+        box-shadow: rgba(233, 229, 229, 0.35) 0px 5px 15px;      }
+
