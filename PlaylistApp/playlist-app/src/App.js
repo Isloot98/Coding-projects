@@ -39,7 +39,7 @@ const updatePlaylistName = (newName) => {
   const getAccess = () => {
     window.location.hash = ''; 
     const client_id = 'a3160decef2a46249bfaeecc944796d7'; 
-    const redirect_uri = 'http://localhost:3000/callback'; 
+    const redirect_uri = 'https://beamish-starlight-28c60a.netlify.app/callback'; 
     const state = 'YOUR_STATE'; 
     const scope = 'user-read-private user-read-email playlist-modify-public playlist-modify-private';
     
