@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import styles from './playlist.module.css';
 
-function Playlist({ playlist, removeFromPlaylist, createPlaylist }) {
+function Playlist({ playlist, removeFromPlaylist, createPlaylist, updatePlaylistName, handleCreatePlaylist  }) {
 const [playlistName, setPlaylistName] = useState('My Playlist')
 
 
-
-
+const handlePlaylistNameChange = (e) => {
+  const newName = e.target.value === '' ? 'My Playlist' : e.target.value;
+  setPlaylistName(newName);
+  updatePlaylistName(newName); 
+}
 
   return (
     <div className={styles.playlist}>
@@ -14,14 +17,7 @@ const [playlistName, setPlaylistName] = useState('My Playlist')
         className={styles.playlistBox}
         type="text"
         placeholder="Playlist name"
-        onChange={(e) => {
-          if (e.target.value === '') {
-            setPlaylistName('My Playlist')
-          } else {
-            setPlaylistName(e.target.value)
-          }
-        }
-      }
+        onChange={handlePlaylistNameChange}
       />
       <h3 className={styles.playlistName}>{playlistName}</h3>
       <ul className={styles.list}>
@@ -37,7 +33,9 @@ const [playlistName, setPlaylistName] = useState('My Playlist')
           </li>
         ))}
       </ul>
+      
       <button className={styles.create} onClick={() => createPlaylist(playlist)}>Create Playlist</button>
+      <h4 className={styles.created}>{handleCreatePlaylist()}</h4>
     </div>
   );
 }

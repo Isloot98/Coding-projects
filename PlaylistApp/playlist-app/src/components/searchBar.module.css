@@ -31,7 +31,7 @@ ul {
     background-color: #ff8000;
     text-align: left;
     margin-left: 2.2rem;
-    text-indent: 1em;
+    ;
     border-radius: 1rem;
     line-height: 1.5;
 }
@@ -63,8 +63,21 @@ ul {
     list-style: none;
     padding: 0;
     color: #001f3f;
-    
+    overflow:scroll;
+max-height: 50rem;
+max-height: 50vmin;
+
   }
+
+  .details > span {
+    padding-left: 1rem;
+  }
+
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+
+  
   
   .list li {
     display: flex;
@@ -74,7 +87,6 @@ ul {
     opacity: 0; 
     animation: slideIn 0.9s forwards; 
     transition: line-height 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-
   }
 
   .list li:hover {

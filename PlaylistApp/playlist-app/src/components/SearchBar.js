@@ -10,7 +10,7 @@ const SearchBar = ({ addToPlaylist, handleSearch, searchResults }) => {
     } else {
       setShowResults(false);
     }
-  }, [searchResults, mockData]);
+  }, [searchResults]);
 
   return (
     <div className={styles.searchBar}>
