@@ -162,9 +162,15 @@ const addTracksToPlaylist = async (playlistId, accessToken) => {
   }
 };
 
+const removePlaylistCreated = () => {
+   setTimeout(() => {
+    setplaylistCreated(false);
+  }, 10000);
+};
+
 const handleCreatePlaylist = () => {
   if (playlistCreated === true) {
-    return <div className={styles.created} > <h4>Playlist Created! <div className={styles.tick} ></div></h4></div>    
+    return <div className={styles.created} > <h4>Playlist Created!<div className={styles.tick} >{removePlaylistCreated()}</div></h4></div>    
   
 }
 };
